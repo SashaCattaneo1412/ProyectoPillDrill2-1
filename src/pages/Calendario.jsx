@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
  import Link from 'next/link';
 import Header from '../components/Header.jsx';
 import CenteredContainer from '../components/CenteredContainer2';
-import style from '../Styles/calendario.module.css';
+import style from '../styles/calendario.module.css';
 
 function Calendario()
 
