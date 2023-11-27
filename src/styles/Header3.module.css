@@ -5,12 +5,13 @@
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     background: rgba(69, 72, 170, 1);
-    opacity: 80%;
-    position: relative; /* Agregamos posición relativa */
-}
-
-.contenedor {
-    position: relative; /* Agregamos posición relativa */
+    opacity: 0.8;
+    position: sticky; /* Cambia a posición sticky */
+    top: 0; /* Fija en la parte superior */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+  }
+  
+  .contenedor {
     width: 100%;
     max-width: 1200px; /* Ancho máximo del contenido */
     margin: 0 auto; /* Centra el contenido */
@@ -18,16 +19,16 @@
     justify-content: space-between; /* Espacio entre elementos */
     align-items: center;
     padding: 0 20px; /* Ajusta el padding según tu diseño */
-}
-
-.Home,
-.Inicio {
+  }
+  
+  .Home,
+  .Inicio {
     border-radius: 40px;
     background: #f9f4f0;
     width: 350px; /* Ancho de los botones */
     height: 80px;
     border: none;
-}
+  }
 
 .logo {
     display: flex;

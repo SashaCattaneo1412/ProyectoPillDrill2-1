@@ -147,6 +147,7 @@ text-align: left;
 .contenedorflotante1 {
   display: flex;
   gap: 20px; /* Espacio entre los elementos dentro del contenedor */
+  margin-top: 20px;
 }
 .contenedorflotante1 input{ 
 

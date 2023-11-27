@@ -38,7 +38,7 @@ const InicioSesion = () => {
       if (data.success) {
         // Los datos coinciden
         
-        router.push('/Compartimento');
+        router.push('/compartimento');
       
         //history.push('/compartimiento'); // Esto requiere acceso a la variable history
       } else {

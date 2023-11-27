@@ -52,6 +52,9 @@ const Compartimiento1 = () => {
       <div className={style.img}>
         <Image width={350} height={650} src="/Image/compartimiento1.png" alt="Imagen comp1" />
       </div>
+      <Image style={{ position: 'absolute', top: '140px', left: '700px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+      <Image style={{ position: 'absolute', top: '150px', left: '100px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+       <Image style={{ position: 'absolute', top: '150px', right: '100px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
       <CenteredContainer>
         <form className="form-container">
           <div className={style.label}>
@@ -84,14 +87,18 @@ const Compartimiento1 = () => {
           </button>
 
           
-          <button onClick={(e) => Hardware(e)}>
-            <div className={style.contenidoEncima}>Guardar</div>
+          <button  className={style.hardware} onClick={(e) => Hardware(e)}>
+            <div className={style.contenidoEncima}>Dispensar</div>
           </button>
 
          
 
         </form>
       </CenteredContainer>
+     
+            <Image style={{ position: 'absolute', bottom: '10px', left: '50px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+               <Image style={{ position: 'absolute', bottom: '10px', right: '50px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+               
 
     </div>
   )

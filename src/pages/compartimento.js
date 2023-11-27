@@ -2,6 +2,7 @@
   import { useRouter } from 'next/router';
   import style from '../styles/compartimiento.module.css';
   import Header from '../components/Header.jsx';
+  import Image from 'next/image.js';
 
   function Compartimiento() {
     const router = useRouter();
@@ -17,7 +18,7 @@
       // Definir compartimento aquí o donde sea necesario
       const compartimento = '1';
       router.push({
-        pathname: '/Compartimento1',
+        pathname: '/compartimento1',
       
       });
 
@@ -42,7 +43,7 @@
       
       // Definir compartimento aquí o donde sea necesario
       const compartimento = '2';
-      router.push('/Compartimento2');
+      router.push('/compartimento2');
       try {
         const response = await fetch('http://localhost:5000/compartimento2');
         
@@ -62,7 +63,7 @@
       
       // Definir compartimento aquí o donde sea necesario
       const compartimento = '3';
-      router.push('/Compartimento3');
+      router.push('/compartimento3');
       try {
         const response = await fetch('http://localhost:5000/compartimento3');
         
@@ -82,7 +83,7 @@
       
       // Definir compartimento aquí o donde sea necesario
       const compartimento = '4';
-      router.push('/Compartimento4');
+      router.push('/compartimento4');
       try {
         const response = await fetch('http://localhost:5000/compartimento4');
     
@@ -103,6 +104,10 @@
         <h1 className={style.title}>Seleccione el compartimiento</h1>
         <div className={style.container}>
           <div className={style.containerimg}>
+          <Image style={{ position: 'absolute', top: '-10px', left: '750px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+      <Image style={{ position: 'absolute', top: '400px', left: '5px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+       <Image style={{ position: 'absolute', top: '400px', right: '5px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+       <Image style={{ position: 'absolute', bottom: '-10px', left: '750px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
             <div className={style.button1} onClick={compartimento1} />
           
             <br />

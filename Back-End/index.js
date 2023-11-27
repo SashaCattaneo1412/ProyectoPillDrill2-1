@@ -24,7 +24,8 @@ const calendar = google.calendar({
   auth: process.env.API_KEY,
 })
 */
-const connection = mysql.createConnection(process.env.DATABASE_URL='mysql://y5igkwq7omclobwihfz6:pscale_pw_qS2Ue8hy2aQkayY2maCYIdLQrlGtprWzTzcc8H8KzZ8@aws.connect.psdb.cloud/proyecto?ssl={"rejectUnauthorized":true}');
+const connection = mysql.createConnection(process.env.DATABASE_URL='mysql://juhfguuk3i4py1239ejv:pscale_pw_VfgJG8zBGQPQNg9lbPZq54BsFMyifCCfGRLdLgYwyPi@aws.connect.psdb.cloud/proyecto?ssl={"rejectUnauthorized":true}'
+);
 connection.connect((err) => {
   if (err) {
     console.error('Error al conectarse a la base de datos:', err);

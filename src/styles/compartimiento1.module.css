@@ -26,6 +26,25 @@
   color: white;
 
   }
+
+ .hardware{
+
+  cursor: pointer;
+  position: absolute;
+  border-radius: 5px;
+  background: #f9f4f0;
+  width: 150px;
+  height: 50px;
+  flex-shrink: 0;
+  border: none;
+  bottom: 35px; /* Ajusta la posición vertical desde la parte inferior */
+  right: 250px; 
+
+
+
+ }
+
+
 .labelguardar{
     color: var(--negro);
     font-weight: 600;

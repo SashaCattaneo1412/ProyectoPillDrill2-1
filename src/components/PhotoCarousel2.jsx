@@ -6,7 +6,7 @@ const PhotoCarousel = ({ images }) => {
 
   return (
     <div className={style.carousel2}>
-    <Carousel showArrows autoPlay infiniteLoop showThumbs={false} >
+    <Carousel  autoPlay infiniteLoop  showStatus={false} showArrows={false} showIndicators={false}  showThumbs={false} >
       {images.map((image, index) => (
         <div key={index}>
           <img src={image} alt={`Slide ${index + 1}`} />

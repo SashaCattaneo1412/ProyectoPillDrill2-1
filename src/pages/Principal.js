@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 import style from '../styles/Principal.module.css';
 import Image from 'next/image';
 import CenteredContainer from '../components/CenteredContainer'; 
+import SmallContainer from '../components/SmallContainer'; 
 
 function Principal() {
 
@@ -95,6 +96,8 @@ function Principal() {
         {session ?
           <>
            <h2 className={style.title}>BIENVENDIO/A {session.user.email}</h2> 
+           <Image style={{ position: 'absolute', top: '50px', left: '50px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+               <Image style={{ position: 'absolute', top: '50px', right: '50px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
            <CenteredContainer>
            <Image className={style.img2} width={250} height={220} src="/Image/calendario 1.png" alt="LOGO" />
            <div className={style.formcontainer}>
@@ -128,14 +131,28 @@ function Principal() {
                 </button>
                 </div>
             </CenteredContainer>
+            <Image style={{ position: 'absolute', bottom: '300px', left: '90px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+            <Image style={{ position: 'absolute', bottom: '10px', left: '50px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+               <Image style={{ position: 'absolute', bottom: '10px', right: '50px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+               <Image style={{ position: 'absolute', bottom: '300px', right: '90px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
           </>
           :
           <>
+               <Image style={{ position: 'absolute', top: '50px', left: '40px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+               <Image style={{ position: 'absolute', top: '50px', right: '40px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+               <SmallContainer>
              <div className={style.container}>
+           
              <Image className={style.img} width={250} height={220} src="/Image/LOGO1.png" alt="LOGO" />
             <button className={style.BTN} onClick={() => googleSignIn()}>CALENDARIO</button>
             <button className={style.BTN} onClick={() => Pilldrill()}>INICIO</button>
             </div>
+            </SmallContainer>
+            <Image style={{ position: 'absolute', bottom: '300px', left: '200px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+            <Image style={{ position: 'absolute', bottom: '10px', left: '50px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+               <Image style={{ position: 'absolute', bottom: '10px', right: '50px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+               <Image style={{ position: 'absolute', bottom: '300px', right: '200px' }} width={60} height={60} src="/Image/circulo.png" alt="LOGO" />
+
           </>
         }
   
