@@ -1,8 +1,8 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout from '../components/Layout.js'
  import Link from 'next/link';
 import Header from '../components/Header.jsx';
-import CenteredContainer from '../components/CenteredContainer2';
+import CenteredContainer from '../components/CenteredContainer2.jsx';
 
 function Calendario()
 
