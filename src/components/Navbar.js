@@ -1,4 +1,4 @@
-import styles from  '../Styles/style.css';
+import styles from  '../styles/style.css';
 
 
 

@@ -1,4 +1,4 @@
-import style from '../Styles/Header.module.css';
+import style from '../styles/Header.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
