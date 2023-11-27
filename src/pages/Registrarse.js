@@ -12,6 +12,8 @@ const Registrarse = () => {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState(""); // Nuevo estado para la confirmación de la contraseña
+  const [TelefonoResponsable, setTelefonoResponsable] = useState("");
+  const [NombreResp, setNombreResponsable] = useState("");
 
   const router = useRouter();
   //ccheckbox
@@ -32,7 +34,7 @@ const Registrarse = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ nombre, mail, password }),
+        body: JSON.stringify({ nombre, mail, password, NombreResp, TelefonoResponsable }),
       });
 
       if (response.ok) {
@@ -52,11 +54,7 @@ const Registrarse = () => {
     }
   };
 
-  const checked = async (e) => {
-
-    <input type="email" className="form-control" id="nombreResp" placeholder="nombre del responsable" onChange={(event) => setPassword(event.target.value)} />;
-    <input type="telefono" className="form-control" id="TELEFONO" placeholder="Telefono del responsable" onChange={(event) => setPassword(event.target.value)} />;
-  }
+  
 
   return (
     <form ref={form}>
@@ -102,9 +100,9 @@ const Registrarse = () => {
 
       {isChecked && (
         <div className={style.check}>
-          <div className={style.contenedorflotante1}>
-            <input type="email" className={`${style['form-control']} ${style['space-right']}`} id="nombreResp" placeholder="nombre del responsable" onChange={(event) => setPassword(event.target.value)} />
-            <input type="email" className="form-control" id="TELEFONO" placeholder="Telefono del responsable" onChange={(event) => setPassword(event.target.value)} />
+          <div className={style.contenedorflotante1}> 
+            <input type="email" className={`${style['form-control']} ${style['space-right']}`} id="nombreResp" placeholder="nombre del responsable" onChange={(event) => setNombreResponsable(event.target.value)} />
+            <input type="email" className="form-control" id="TELEFONO" placeholder="Telefono del responsable" onChange={(event) => setTelefonoResponsable(event.target.value)} />
           </div>
         </div>
       )} <br />

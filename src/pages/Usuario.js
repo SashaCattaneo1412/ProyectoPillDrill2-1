@@ -8,6 +8,7 @@ import Header from '../components/Header3';
 function Usuario() {
   const [userData, setUserData] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
+ 
 
   useEffect(() => {
     const userEmail = 'correo@ejemplo.com'; // Reemplaza con el correo del usuario logueado

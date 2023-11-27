@@ -41,13 +41,17 @@ const Header = () => {
             </button>
           </div>
           <div className="user-link">
-            <Link href="/Usuario">
+            <div  
+             onClick={(event) => {
+              event.preventDefault();
+              router.push('/');
+              }}>
               <img
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/af3ceae4-fa72-428e-9439-b61faf6b62b7?apiKey=066a951e6da146a787c64f344598a4a3&"
                 className="user-img"
               />
-            </Link>
+            </div>
           </div>
         </div>
       </div>

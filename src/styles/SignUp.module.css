@@ -1,10 +1,18 @@
+.title{
 
+  font-size: 100px;
+  font-weight: 600;
+  font-family: 'Lexend', 'sans serif';
+  margin-bottom: 5px;
+  margin-top: 2px;
+ 
+}
 
 .flexbox {
   display: grid;
   place-content: center;
   justify-content: center;
-  gap: 7px;
+  gap: 12px;
  }
 
  .google{
@@ -101,8 +109,8 @@
  .contenedorflotante input[type="email"] {
 
 
-   width: 290px;
-   height: 44px;
+    width: 290px;
+   height: 50px;
    margin-bottom: -1px;
    font-family: 'Lexend',sans-serif;
    font-size: 15px;
@@ -117,7 +125,7 @@
  .contenedorflotante input[type="password"] {
    font-family: 'Lexend', sans-serif;
    width: 290px;
-   height: 44px;
+   height: 50px;
    font-size: 15px;
    font-weight: 800;
    line-height: 28px;

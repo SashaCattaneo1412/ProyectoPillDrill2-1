@@ -56,7 +56,9 @@ const InicioSesion = () => {
        <HeaderB/>
       <PhotoCarousel images={images} />
              <form ref={form}>
+            
         <div className={style.flexbox}>
+        <h1 className={style.title}>INICIA SESION</h1>
           <div className={style.contenedorflotante}>
             <input
               type="email" // Cambiado de 'INPUT' a 'email'
@@ -78,12 +80,7 @@ const InicioSesion = () => {
           </div>
 
           <div className={style.seguimiento}>
-            <div>
-              <label className={style.cuenta}>
-                ¿Olvidaste tu contraseña?
-              </label>
-              <Link href="/RecuperarContraseña">Recupérala</Link> {/* Corregir la ruta */}
-            </div>
+            
 
             <div>
               <label className={style.cuenta}>

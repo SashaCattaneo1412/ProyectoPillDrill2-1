@@ -24,7 +24,7 @@ const calendar = google.calendar({
   auth: process.env.API_KEY,
 })
 */
-const connection = mysql.createConnection(process.env.DATABASE_URL='mysql://juhfguuk3i4py1239ejv:pscale_pw_VfgJG8zBGQPQNg9lbPZq54BsFMyifCCfGRLdLgYwyPi@aws.connect.psdb.cloud/proyecto?ssl={"rejectUnauthorized":true}'
+const connection = mysql.createConnection(process.env.DATABASE_URL='mysql://l7qn2zg73dyp6rflq6nl:pscale_pw_co4OMBGO1OiXiJdl8H0c9jMMtxYxhskuDsn8iSnBM2Z@aws.connect.psdb.cloud/proyecto?ssl={"rejectUnauthorized":true}'
 );
 connection.connect((err) => {
   if (err) {
@@ -164,10 +164,10 @@ app.get("/status", (req, res) => {
 });
 
 app.post("/registrarse", (req, res) => {
-  const { nombre, mail, password } = req.body;
+  const { nombre, mail, password, NombreResp, TelefonoResponsable } = req.body;
   console.log(req.body);
-  const updateQuery = `INSERT INTO usuario SET nombre = ?, mail = ?, contrasenia = ?`;
-  const values = [nombre, mail, password];
+  const updateQuery = `INSERT INTO usuario  SET nombre = ?, mail = ?, contrasenia = ?, nombreresponsable = IFNULL(?, NULL), numeroresponsable = IFNULL(?, NULL)`;
+  const values = [nombre, mail, password, NombreResp, TelefonoResponsable];
   connection.query(updateQuery, values, (error, results) => {
     if (error) {
       console.error('Error al ejecutar la consulta de actualización:', error);
@@ -215,6 +215,7 @@ app.post("/InicioSesion", (req, res) => {
       if (results.length > 0) {
         console.log("los resultados coinciden");
         res.status(200).json({ success: true, message: 'Inicio de sesión exitoso' });
+        
       }
       else {
         console.log("los resultados no coinciden");
